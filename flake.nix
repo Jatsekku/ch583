@@ -12,7 +12,7 @@
         in pkgs.mkShell {
           name = "riscv32-shell";
           packages = with pkgs.pkgsCross.riscv32-embedded.buildPackages;
-            [ gcc ];
+            [ gcc cmake ];
 
           shellHook = ''
             riscv32-none-elf-gcc --version
